@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/FormInterrese.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Formulário de interesse</title>
+</head>
+<body>
+ 
+  <div class="Parte1Principal">
+        <div class="PrincipalFomrs">
+
+          <h1>Formulário de interesse</h1>
+
+          <form id="formAddAnimais" class="formulario" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input class="aaa colorblack" type="text" id="nome" class="form-input" maxlength="35" required>
+            </div>
+
+           
+            <div class="form-group">
+              <label for="Email">Email:</label>
+              <input class="aaa colorblack" type="email" id="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="idade">Idade:</label>
+              <input class="aaa colorblack" type="number" id="idade" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="Cep">Cep:</label>
+              <input class="aaa colorblack cep-mask" type="text" id="Cep" maxlength="10" class="form-input" placeholder="xx-xxx.xxx" required>
+            </div>
+
+        </div>
+        <div class="ParteLateral">
+        
+          <div class="form-group">
+            <label for="Cpf">CPF:</label>
+            <input class="aaa colorblack cpf-mask" type="text" maxlength="14" id="Cpf" placeholder="xxx.xxx.xxx-xx" required oninput="mascaracpf(this)">
+          </div>
+
+          <div class="form-group">
+            <label for="Telefone">Telefone:</label>
+            <input class="aaa colorblack telefone-mask" type="text" id="Telefone" maxlength="15" placeholder="(xx) xxxx-xxxx" required oninput="Mascaratelefone(this)">
+          </div>
+   
+          <div class="form-group">
+            <label for="mensagem">Mensagem: <div class="textocontador" id="contadorCaracteres" style="display:none;">200 caracteres restantes</div></label>
+
+            <textarea class="aaaMensagen colorblack form-input" name="mensagem" placeholder="Por qual motivo deseja adotar" id="mensagem" maxlength="200" oninput="updateContadorCaracteres()" onclick="ocultarExibir()"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" id="addAnimais" class="flat-button buttonFinalizar colorblackbutton">ENVIAR</button>
+          </div>
+
+          </form>
+        </div>
+  </div>
+
+  <script>
+    function verificarIdade(idade) {/*verifica se a idade e menor que 0 e/ou maior que 50*/
+       if (idade < 0 || idade > 120){
+       window.alert("Informe uma idade valida!");
+     }
+       }
+     document.getElementById('addAnimais').addEventListener('click', function() {
+       var idade = document.getElementById('idade').value;
+       verificarIdade(idade);
+     });
+
+//------------------------------------------------------------------
+     document.getElementById('addAnimais').addEventListener('click', function(){
+      var Cpf = document.getElementById('Cpf').value;
+      VerificarCpf(Cpf);
+     });
+     
+     document.addEventListener('DOMContentLoaded', function () {
+          var textarea = document.getElementById('mensagem');
+          var divToHide = document.getElementById('contadorCaracteres');
+
+          textarea.addEventListener('focus', function() {
+              divToHide.style.display = 'block';
+          });
+
+          // (Opcional) Para mostrar a div novamente quando o textarea perder o foco
+          textarea.addEventListener('blur', function() {
+              divToHide.style.display = ''; // ou 'block', dependendo do que você quer
+          });
+      });
+  
+     function updateContadorCaracteres() {/*Diminui os caracteres da mensagem*/
+      var maxLength = 200;
+      var mensagem = document.getElementById('mensagem').value;
+      var caracteresRestantes = maxLength - mensagem.length;
+
+      document.getElementById('contadorCaracteres').textContent = caracteresRestantes + ' caracteres restantes';
+}
+//-----------------------------------------------------------------
+  
+      document.addEventListener('DOMContentLoaded', function () {
+      var cepInputs = document.querySelectorAll('.cpf-mask');
+
+      var applyCpfMask = function (input) {
+        var value = input.value;
+        
+        value = value.replace(/\D/g, "");
+
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+       
+
+        input.value = value;
+    };
+
+    cepInputs.forEach(function (input) {
+        input.addEventListener('input', function () {
+          applyCpfMask(input);
+        });
+    });
+});
+//-----------------------------------------------------------------
+      document.addEventListener('DOMContentLoaded', function () {
+      var cepInputs = document.querySelectorAll('.cep-mask');
+
+      var applyCepMask = function (input) {
+        var value = input.value;
+        
+        value = value.replace(/\D/g, "");
+
+        if(value.length <= 5){
+            value = value.replace(/(\d{2})(\d)/, "$1.$2");
+        } else {
+            value = value.replace(/(\d{2})\.?(\d{3})(\d)/, "$1.$2-$3");
+        }
+
+        input.value = value;
+    };
+
+    cepInputs.forEach(function (input) {
+        input.addEventListener('input', function () {
+            applyCepMask(input);
+        });
+    });
+});
+//---------------------------------------------------------
+
+      document.addEventListener('DOMContentLoaded', function () {
+      var cepInputs = document.querySelectorAll('.telefone-mask');
+
+      var applyTelefoneMask = function (input) {
+        var value = input.value;
+        
+        value = value.replace(/\D/g, "");
+
+        value = value.replace(/(\d{2})(\d)/, "($1) $2");
+        value = value.replace(/(\d{5})(\d)/, "$1-$2");
+
+        input.value = value;
+    };
+    cepInputs.forEach(function (input) {
+        input.addEventListener('input', function () {
+          applyTelefoneMask(input);
+        });
+    });
+});
+
+
+
+
+
+
+ </script>
+
+
+  
+  
+</body>
+</html>

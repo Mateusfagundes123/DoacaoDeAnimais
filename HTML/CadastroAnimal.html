@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/CadastroAnimal.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Cadastro de Animais</title>
+</head>
+<body>
+ 
+  <div class="Parte1Principal">
+
+      <div class="PrincipalFomrs">
+
+      <h1 class="page-title">Cadastro de Animais</h1>
+
+    <form id="formAddAnimais" class="formulario" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input class="aaa colorblack" type="text" id="nome" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="idade">Idade:</label>
+          <input class="aaa colorblack" type="number" id="idade" class="form-input" required>
+        </div>
+
+
+        <div class="PartedeEscolha">
+
+
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <select class="aaati colorblack"  name="tipo" id="tipo" class="form-input" required>
+                    <option>Gato</option>
+                    <option>Cachorro</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label  for="porte">Porte:</label>
+                <select class="aaati colorblack" type="text" id="porte" class="form-input" required>
+                    <option>Pequeno</option>
+                    <option>Médio</option>
+                    <option>Grande</option>
+                </select>
+        </div>
+
+
+      </div>
+        
+
+
+      <div class="ParaOsSimNao">
+    
+            <div class="form-group">
+                <label for="castrado">Castrado:</label>
+                <input type="radio" required value="simCadastrado" name="castrado" id="castrado" class="form-input sino" >SIM
+                <input type="radio" required value="naoCadastrado" name="castrado" id="castrado" class="form-input sino2" >NÃO
+            </div>
+
+            <div class="form-group">
+                <label for="vacinado">Vacinado:</label>
+                <input type="radio" required value="simVacinado"   name="vacinado" id="vacinado" class="form-input sino" step="0.01">SIM
+                <input type="radio" required value="naoVacinado"   name="vacinado" id="vacinado" class="form-input sino2" step="0.01">NÃO
+            </div>
+            
+      </div>
+
+      <div class="form-group">
+        <label for="messagem">mensagem:</label>
+        <textarea class="aaaMensagen colorblack form-input" name="mensagem" placeholder="Pequena descrição do animal" id="mensagem" maxlength="200"></textarea>
+      </div>
+
+
+
+
+  </div>
+
+    <div class="imgpartelateral">
+  
+      
+          <div class="img1">
+            <div class="caixa-imagem colorblack" onclick="document.getElementById('imagemInput1').click()">
+              <input type="file" id="imagemInput1" class="imagem-input" accept="image/*" onchange="exibirImagem(1)">
+              <img id="imagemSelecionada1" class="imagem-selecionada">
+              <p class="uppP">clique aqui para selecionar uma imagem</p>
+            </div>
+          </div>
+          <div class="img2">
+            <div class="caixa-imagem colorblack" onclick="document.getElementById('imagemInput2').click()">
+              <input type="file" id="imagemInput2" class="imagem-input" accept="image/*" onchange="exibirImagem(2)">
+              <img id="imagemSelecionada2" class="imagem-selecionada">
+              <p class="uppP">clique aqui para selecionar uma imagem</p>
+            </div>
+          </div>
+
+          <div class="img3">
+            <div class="caixa-imagem colorblack" onclick="document.getElementById('imagemInput3').click()">
+              <input type="file" id="imagemInput3" class="imagem-input" accept="image/*" onchange="exibirImagem(3)">
+              <img id="imagemSelecionada3" class="imagem-selecionada">
+              <p class="uppP">clique aqui para selecionar uma imagem</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" id="addAnimais" class="flat-button buttonFinalizar colorblackbutton">Cadastrar Animal</button>
+          </div>
+    </div>
+  </form>
+  
+  <script>
+
+      function verificarIdade(idade) {/*verifica se a idade e menor que 0 e/ou maior que 50*/
+        if (idade < 0 || idade > 50){
+        window.alert("Informe uma idade valida!");
+      }
+        }
+      document.getElementById('addAnimais').addEventListener('click', function() {
+        var idade = document.getElementById('idade').value;
+        verificarIdade(idade);
+      });
+
+    function exibirImagem(numero) {
+    const input = document.getElementById(`imagemInput${numero}`);
+    const imagem = document.getElementById(`imagemSelecionada${numero}`);
+
+    const file = input.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        imagem.src = e.target.result;
+        imagem.style.display = 'block';
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
+
+</script>
+
+</body>
+</html>

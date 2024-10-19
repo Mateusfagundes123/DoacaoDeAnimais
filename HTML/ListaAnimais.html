@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/ListaAnimais.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Lista de Animais</title>
+</head>
+<body>
+    
+    
+<div class="partedahome">
+    <nav>
+        <div class="logo"> DOAÇÃO DE ANIMAIS </div>
+
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+        </div>
+
+        <ul>
+            <li> <a href="#" class="BotaoHome" onclick="window.location.href='./index.html';"> HOME</a> </li>
+
+            <li> <a href="index.html#sobreDoacaoWH" class="BotaoSobre"> SOBRE</a> </li>
+
+            <li> <a href="#" CLASS="BotaoAnimais" onclick="window.location.href='./ListaAnimais.html';"> ANIMAIS</a> </li>
+
+            <li> <a href="index.html#contato" class="BotaoContato">CONTATO</a> </li>
+
+        </ul>
+    </nav>
+</div>
+
+      <div class="linhabranca"></div>
+  
+    <div class="PartePincipaldaListadeAnimais">
+        <div class="FiltrosBarraLateral">
+            <form>
+                <label for="tipo">Tipo:</label><br>
+                <input type="checkbox" name="cachorro" id="cachorro"> <label for="cachorro">Cachorro</label><br>
+                <input type="checkbox" name="gato" id="gato"> <label for="gato">Gato</label><br>
+
+                <label for="porte" class="labelFiltros">Porte</label><br>
+                <input type="checkbox" name="pequeno" id="pequeno"> <label for="pequeno">Pequeno</label><br>
+                <input type="checkbox" name="medio" id="medio"> <label for="medio">Médio</label><br>
+                <input type="checkbox" name="grande" id="grande"> <label for="grande">Grande</label><br>
+
+                <label for="castrado">Castrado:</label><br>
+                <input type="checkbox" value="simCadastrado" name="castrado" id="simCastrado"> <label for="simCastrado">Sim</label><br>
+                <input type="checkbox" value="naoCadastrado" name="castrado" id="naoCastrado"> <label for="naoCastrado">Não</label><br>
+
+                <label for="vacinado">Vacinado:</label><br>
+                <input type="checkbox" value="simVacinado" name="vacinado" id="simVacinado"> <label for="simVacinado">Sim</label><br>
+                <input type="checkbox" value="naoVacinado" name="vacinado" id="naoVacinado"> <label for="naoVacinado">Não</label><br>
+
+                <button type="submit">Aplicar</button>
+            </form>
+        </div>
+
+    <div class="listadeanimais">
+    
+    <ul class="ListedeAnimaisCaixas">
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+         <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li> <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="ParteAnimal">
+            <ul class="parteImgEEscrita">
+                <li><img src="../IMg/Cinematic_Kino_cat_1.jpg" alt="Imagem 1"></li>
+                <li class="PartteCaicinhaEscrita">
+                    <ul class="EscritasDosAnimais">
+                        <li><a class="NomedoAnimal">Mimi</a></li>
+                    </ul>
+                    <ul class="TipodoAnimalDivPrincipal">
+                        <li><a class="TipodoAnimal">Gato</a></li>
+                    </ul>
+                    <ul class="PortedoAnimalDivPrincipal">
+                        <li><a class="PortedoAnimal">Pequeno</a></li>
+                    </ul>
+                    <ul class="BotaodeAbrirCaixaDeAnimais">
+                        <li><a class="botaodeabrir" href="../HTML/Animal.html">Abrir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </div>
+</div>
+       
+       
+    
+<script src="../JavaScript.js/JSListaAnimais.js"></script> 
+
+</body>
+</html>

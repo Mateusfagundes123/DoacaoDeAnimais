@@ -1,0 +1,189 @@
+body{
+  padding: 0;
+  margin: 0;
+  height: 650px;
+  background-color: #63724F;/*ou usar essa   background-color: rgb(250, 249, 246);  */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Parte1Principal{
+  width: 1000px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  float: left;
+  margin-top: 150px;
+  display: flex;
+}
+
+.PrincipalFomrs{
+  width: 50%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+.imgpartelateral{
+  width: 50%;
+  height: auto;
+}
+
+H1{
+  margin-left: 35px;
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.aaa{
+  width: 400px;
+  height: 40px;
+  background-color: #ffff;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-left: 60px;
+  margin-top: 5px;
+}
+
+.colorblack, .colorblackbutton{
+  transition: background-color 0.3s;
+}
+.colorblack:hover{
+  background-color: rgb(196, 197, 195);
+}
+.colorblackbutton:hover{
+  background-color: #63724F;
+}
+
+label{
+  display: flex;
+  padding-right: 30px;
+  margin-left: 60px;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.sino{
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.PartedeEscolha{
+  width: 100%;
+  height: 85px;
+  display: flex;
+}
+.aaati{
+  width: 150px;
+  height: 40px;
+  background-color: #ffff;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-left: 60px;
+  margin-top: 5px;
+
+}
+
+.ParaOsSimNao{
+  width: 100%;
+  height: 70px;
+  display: flex;
+}
+.aaaMensagen {
+  width: 400px;
+  height: 100px;
+  background-color: #ffff; /* Cor de fundo deve ser um hexadecimal válido, faltou um 'f' aqui */
+  border-radius: 10px;
+  font-size: 18px;
+  margin-left: 60px;
+  margin-top: 5px;
+  padding-top: 10px; /* Adiciona 10px de espaço interno na parte superior */
+  padding-left: 10px; /* Adiciona 10px de espaço interno à esquerda para começar a escrever */
+  resize: none; /* Impede o redimensionamento do textarea */
+  overflow: auto; /* Adiciona barra de rolagem se o texto exceder a altura */
+  box-sizing: border-box; /* Garante que o padding não adicione largura extra ao elemento */
+}
+
+.input-selecionado {
+  outline: 2px solid #000000; /* ou qualquer outra cor e estilo de destaque que você preferir */
+}
+
+.caixa-imagem {
+  width: 330px;
+  height: 160px;
+  border: 100px  black;
+  position: relative;
+  overflow: hidden;
+  margin: 5px auto;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.uppP{
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+.imagem-input {
+  display: none;
+}
+
+.imagem-selecionada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.img1{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+.img2{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+
+}
+.img3{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+.buttonFinalizar{
+  width: 200px;
+  height: 40px;
+  background-color: #9bb37c;
+  margin-left: 219px;
+  margin-top: 20px;
+}
+
+/*MIDIA QUERYS*/
+@media (max-width: 600px) {
+  .Parte1Principal{
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .PrincipalFomrs{
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+  }
+  .imgpartelateral{
+    width: 100%;
+    height: auto;
+  }
+  .aaa{
+    width: 200px;
+    height: 30px;
+    background-color: #ffff;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 60px;
+    margin-top: 5px;
+  }
+  
+ 
+  
+
+}
